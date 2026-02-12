@@ -428,6 +428,7 @@ state [here](https://playwright.dev/docs/auth).
 The Playwright MCP Chrome Extension allows you to connect to existing browser tabs and leverage your logged-in sessions and browser state. See [packages/extension/README.md](packages/extension/README.md) for installation and setup instructions.
 For this fork's operational notes and safety guidance, see [docs/custom-fork-playwright-mcp.md](docs/custom-fork-playwright-mcp.md).
 For Codex usage on this fork, reusable skill files are provided under [skills/playwright-mcp-custom](skills/playwright-mcp-custom).
+Use [scripts/sync-codex-skill.sh](scripts/sync-codex-skill.sh) to sync that skill to your local Codex skills directory.
 
 ### Initial state
 

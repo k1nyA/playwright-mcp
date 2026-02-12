@@ -44,12 +44,16 @@ Behavior added:
 ## Skill sync (for Codex)
 
 This repo includes a reusable skill at `skills/playwright-mcp-custom`.
-To sync this skill into local Codex skills:
+Use the sync script:
 
 ```bash
-rsync -a --delete \
-  /Users/kinya/Desktop/claude/playwright-mcp-custom/playwright-mcp/skills/playwright-mcp-custom/ \
-  /Users/kinya/.codex/skills/playwright-mcp-custom/
+./scripts/sync-codex-skill.sh
+```
+
+Preview only:
+
+```bash
+./scripts/sync-codex-skill.sh --dry-run
 ```
 
 ## Common failures
