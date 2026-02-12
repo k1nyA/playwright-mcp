@@ -80,6 +80,8 @@ If you maintain your own fork, this customized build adds runtime controls in th
 - Shared fixed token across multiple Macs (M4/M1)
 - Disable token validation (less secure)
 
+For background, intent, and operational cautions, see [../../docs/custom-fork-playwright-mcp.md](../../docs/custom-fork-playwright-mcp.md).
+
 ### Build your forked extension
 
 ```bash
