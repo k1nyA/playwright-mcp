@@ -1,0 +1,4 @@
+interface:
+  display_name: "Playwright MCP Custom"
+  short_description: "Use custom forked Playwright MCP extension safely"
+  default_prompt: "Use the local custom Playwright MCP workflow and troubleshoot token mismatch or extension connection issues."

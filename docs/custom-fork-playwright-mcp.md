@@ -41,6 +41,17 @@ Behavior added:
 4. Restart already-running CLI/app sessions to pick up env changes.
 5. Run a smoke test (`browser_tabs` list) before real tasks.
 
+## Skill sync (for Codex)
+
+This repo includes a reusable skill at `skills/playwright-mcp-custom`.
+To sync this skill into local Codex skills:
+
+```bash
+rsync -a --delete \
+  /Users/kinya/Desktop/claude/playwright-mcp-custom/playwright-mcp/skills/playwright-mcp-custom/ \
+  /Users/kinya/.codex/skills/playwright-mcp-custom/
+```
+
 ## Common failures
 
 ### Invalid token provided
