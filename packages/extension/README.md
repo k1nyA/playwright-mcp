@@ -74,4 +74,28 @@ By default, you'll need to approve each connection when the MCP server tries to 
 
 This token is unique to your browser profile and provides secure authentication between the MCP server and the extension. Once configured, you won't need to manually approve connections each time.
 
+## Custom Build Options (Fork)
 
+If you maintain your own fork, this customized build adds runtime controls in the extension UI:
+- Shared fixed token across multiple Macs (M4/M1)
+- Disable token validation (less secure)
+
+### Build your forked extension
+
+```bash
+cd packages/extension
+npm install
+npm run build
+```
+
+Then load `packages/extension/dist` in `chrome://extensions`.
+
+### Set a shared fixed token (recommended for your M4/M1 setup)
+
+1. Open the extension connect/status page.
+2. In "Optional: set a shared fixed token", paste the shared token and click **Save**.
+3. Set the same value in MCP client env as `PLAYWRIGHT_MCP_EXTENSION_TOKEN`.
+
+### Disable token check (less secure)
+
+On the same page, enable **Disable token check (auto-accept connections)** only in trusted local environments.

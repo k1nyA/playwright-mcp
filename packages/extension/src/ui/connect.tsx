@@ -17,7 +17,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Button, TabItem } from './tabItem';
-import { AuthTokenSection, getOrCreateAuthToken } from './authToken';
+import { AuthTokenSection, getOrCreateAuthToken, isAuthTokenCheckDisabled } from './authToken';
 
 import type { TabInfo } from './tabItem';
 
@@ -89,8 +89,14 @@ const ConnectApp: React.FC = () => {
         return;
       }
 
-      const expectedToken = getOrCreateAuthToken();
       const token = params.get('token');
+      if (isAuthTokenCheckDisabled()) {
+        await connectToMCPRelay(relayUrl);
+        await handleConnectToTab();
+        return;
+      }
+
+      const expectedToken = getOrCreateAuthToken();
       if (token === expectedToken) {
         await connectToMCPRelay(relayUrl);
         await handleConnectToTab();
