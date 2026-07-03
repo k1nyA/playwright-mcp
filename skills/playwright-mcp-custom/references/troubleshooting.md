@@ -40,6 +40,19 @@ Actions:
 2. Confirm Chrome remote debugging is unrelated when using Playwright extension mode.
 3. Keep token validation on and use fixed token to avoid repeated auth mismatch prompts.
 
+## Symptom: print flow did not download PDF
+
+Cause candidates:
+
+1. `印刷` opens print preview only and does not trigger direct file download.
+2. Platform-specific print behavior blocks automated save flow.
+
+Actions:
+
+1. Use each platform's direct download path when available (example in freee: `送付 > PDFダウンロード`).
+2. Confirm a new PDF is created in `~/Downloads`.
+3. Treat `印刷` as fallback/manual path, not default automation path.
+
 ## Diagnostic Commands
 
 Show current Playwright server config in Codex:

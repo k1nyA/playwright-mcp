@@ -29,3 +29,4 @@ Follow the token synchronization workflow first, then run a smoke test before an
 1. For setup and standard operation, read `references/setup-and-ops.md`.
 2. For custom fork behavior and intent, read `references/fork-diff.md`.
 3. For error handling, read `references/troubleshooting.md`.
+4. For real browser task patterns (Discord search, freee operation), read `references/browser-ops-runbook.md`.

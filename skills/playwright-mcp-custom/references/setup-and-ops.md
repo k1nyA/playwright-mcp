@@ -34,3 +34,9 @@ Expected: `playwright.browser_tabs` succeeds and lists at least one tab.
 - Preferred: `auth-token-fixed` enabled, validation enabled.
 - Allowed only for temporary debug: `auth-token-disable-check=true`.
 - Never keep token-check disabled in normal operation.
+
+## Browser Task Flow
+
+For repeatable browser operations in real services (for example Discord and freee),
+use `@playwright/cli` with `--extension` and a fixed session name (`default`).
+Detailed command patterns and safety notes are in `browser-ops-runbook.md`.
